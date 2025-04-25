@@ -1,0 +1,47 @@
+{% include 'adminheader.html'%}
+<center><h1>PUNISHMENT TYPES</h1></center>
+<form method="post"><center>
+	<table align="center" class="table" style="width: 600px">
+		<tr>
+			<th>Punishment Name</th>
+			<td><input type="text" name="punishment_name" class="form-control"></td>
+		</tr>
+		<tr>
+			<th>Punishment Description</th>
+			<td><textarea rows="5" cols="10" name="punishment_desc"class="form-control"></textarea></td>
+		</tr>
+		<tr>
+			<th>Penalty Description</th>
+			<td><textarea rows="5" cols="10" name="penalty_desc"class="form-control"></textarea></td>
+		</tr>
+		<tr>
+			<th>Penalty Amount</th>
+			<td><input type="number" name="amount"class="form-control"></td>
+		</tr>
+		<tr>
+			<td colspan="2" align="center"><input type="submit" name="submit" class="btn btn-primary" value="submit"></td>
+		</tr>
+	</table></center>
+	<br>
+	<h1 align="center">PUNISHMENTS</h1>
+	<center>
+	<table class="table" style="width: 1000px">
+		<tr>
+			<th>Punishment Name</th>
+			<th>Punishment Description</th>
+			<th>Penalty Description</th>
+			<th>Penalty Amount</th>
+		</tr>
+		<tbody>
+			{% for row in data['adminpunishmanage']%}
+			<tr>
+				<th>{{row['punish_type_name']}}</th>
+				<th>{{row['punish_type_desc']}}</th>
+				<th>{{row['penalty_desc']}}</th>
+				<th>{{row['penalty_amount']}}</th>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table></center>
+</form>
+{% include 'footer.html'%}

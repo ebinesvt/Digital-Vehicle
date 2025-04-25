@@ -1,0 +1,39 @@
+{% include 'adminheader.html'%}
+<center><h1>MANAGE DOCUMENTS</h1></center>
+<form method="post">
+	<center></center>
+	<table align="center" class="table" style="width: 600px">
+		<tr>
+			<th>Document Name</th>
+			<td><input type="text" name="doc_type_name" required="" class="form-control"></td>
+		</tr>
+		<tr>
+			<th>Document Description</th>
+			<td><textarea rows="10" cols="20" name="doc_type_desc"class="form-control" required=""></textarea></td>
+		</tr>
+		<tr>
+			<th></th>
+		</tr>
+		<tr>
+			<td colspan="2" align="center"><input type="submit" name="submit" name="submit" class="btn btn-primary "></td>	
+		</tr>
+	</table></center>
+	<br>
+	<h1 align="center">DOCUMENTS</h1>
+	<center>
+	<table align="center" class="table" style="width: 400px">
+		<tr>
+			<td>Document Name</td>
+			<td>Document Description</td>
+		</tr>
+		<tbody>
+			{% for row in data['admindocumentmanage']%}
+			<tr>
+				<td>{{row['doc_type_name']}}</td>
+				<td><textarea>{{row['doc_type_desc']}}</textarea></td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table></center>
+</form>
+{% include 'footer.html'%}

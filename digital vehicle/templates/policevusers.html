@@ -1,0 +1,37 @@
+{% include 'policeheader.html'%}
+
+	<h1 align="center">USERS</h1>
+	<center>
+		<table class="table" style="width: 800px">
+			<tr>
+				<td>First Name</td>
+				<td>Last Name</td>
+				<td>Place</td>
+				<td>Pincode</td>
+				<td>House Name</td>
+				<td>Gender</td>
+				<td>Date of Birth</td>
+				<td>Photo</td>
+				<td>Phone</td>
+				<td>Email</td>
+			</tr>
+			<tbody>
+				{% for row in data['pu']%}
+				<tr>
+					<td>{{row['first_name']}}</td>
+					<td>{{row['last_name']}}</td>
+					<td>{{row['place']}}</td>
+					<td>{{row['pincode']}}</td>
+					<td>{{row['house_name']}}</td>
+					<td>{{row['gender']}}</td>
+					<td>{{row['dob']}}</td>
+					<td><img src="/{{row['photo']}}" width="200px" height="200px"></td>
+					<td>{{row['phone']}}</td>
+					<td>{{row['email']}}</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table></center>
+
+
+		{% include 'footer.html' %}

@@ -1,0 +1,34 @@
+{% include 'policeheader.html' %}
+<form method="post">
+<center><b><h1>MANAGE PUNISHMENTS</h1><b></center>
+<center>
+	<table class="table" style="width: 800px">
+		<tr>
+			<th>Select User:</th>
+			<td>
+				<select name="user" required class="form-control">
+					<option value="">Select</option>
+					{% for row in data['users'] %}
+					<option value="{{row['user_id']}}">{{row['name']}}</option>
+					{% endfor %}
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<th>Select Punishment:</th>
+			<td>
+				<select name="punishment" required class="form-control">
+					<option value="">Select</option>
+					{% for row in data['punish'] %}
+					<option value="{{row['punish_type_id']}}">{{row['punish_type_name']}}</option>
+					{% endfor %}
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" align="center"><input type="submit" name="add" class="btn btn-primary" value="Add Punishment"></td>
+		</tr>
+	</table>
+</center>
+</form>
+{% include 'footer.html' %}

@@ -1,0 +1,66 @@
+{% include 'policeheader.html' %}
+
+<form method="post">
+	<center><h1><b>SEARCH USERS</b></h1></center>
+	<center>
+	<table class="table" style="width: 500px">
+		<tr>
+			<th>Licence Number/RC Number:</th>
+			<td><input type="text" name="search" class="form-control"></td>
+		</tr>
+		<tr>
+			<td  align="right"><input type="submit" class="btn btn-primary" name="searchs" value="Search Users"></td>
+			<td  align="right"><input type="submit" class="btn btn-primary" name="submit" value="Search Vehicles"></td>
+		</tr>
+	</table></center>
+	{% if data['search_details'] %}
+<center>
+	<table class="table" style="width: 800px">
+		<tr>
+			<th>Name</th>
+			<th>Place</th>
+			<th>Pincode</th>
+			<th>House Name</th>
+			<th>Gender</th>
+			<th>DOB</th>
+			<th>Phone</th>
+			<th>Photo</th>
+
+		</tr>
+		<tr>
+		{% for row in data['search_details'] %}
+			<td>{{row['name']}}</td>
+			<td>{{row['place']}}</td>
+			<td>{{row['pincode']}}</td>
+			<td>{{row['house']}}</td>
+			<td>{{row['gender']}}</td>
+			<td>{{row['dob']}}</td>
+			<td>{{row['phone']}}</td>
+			<td><img src="/{{row['photo']}}" width="200px" height="200px"></td>
+			
+		{% endfor %}
+		</tr>
+	</table></center>
+	{% elif data['de'] %}
+	<center>
+	<table class="table" style="width: 800px">
+		<tr>
+			<th>Registration Number</th>
+			<th>MFG Year</th>
+			<th>Brand</th>
+			<th>Model</th>
+		</tr>
+		{% for row in data['de'] %}
+		<tr>
+			<td>{{row['register_no']}}</td>
+			<td>{{row['manfacture_year']}}</td>
+			<td>{{row['brand']}}</td>
+			<td>{{row['model']}}</td>
+		</tr>
+		{% endfor %}
+	</table>
+	</center>
+	{% endif %}
+</form>
+
+{% include 'footer.html' %}

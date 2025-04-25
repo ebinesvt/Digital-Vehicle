@@ -1,0 +1,126 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="#47d147"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MAKE PAYMENT"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:text="Total Amount"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/etamount"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#fff"
+            android:gravity="center"
+            android:inputType="number"
+            android:editable="false"
+            android:layout_margin="20dp"
+            android:ems="10" >
+
+            <requestFocus />
+        </EditText>
+         <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Card Number"
+           android:layout_gravity="center"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+        <EditText
+            android:id="@+id/card"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#fff"
+            android:gravity="center"
+            android:hint="0000-0000-0000-0000"
+            android:layout_margin="20dp"
+            android:inputType="number"
+            android:maxLength="16"
+            android:ems="10" >
+
+            <requestFocus />
+        </EditText>
+         <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+           android:layout_gravity="center"
+            android:text="CVV Number"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+        <EditText
+            android:id="@+id/cvv"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#fff"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="3"
+            android:hint="000"
+            android:ems="10" >
+
+            <requestFocus />
+        </EditText>
+         <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+           android:layout_gravity="center"
+            android:text="Expiry Date"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+        <EditText
+            android:id="@+id/edate"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#fff"
+            android:hint="mm-yyyy"
+            android:gravity="center"
+            android:layout_margin="20dp"
+            android:ems="10" >
+
+            <requestFocus />
+        </EditText>
+
+        <Button
+            android:id="@+id/btpay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#000"
+            android:layout_marginBottom="20dp"
+            android:textColor="#fff"
+            android:layout_gravity="center"
+            android:text="Pay Amount" />
+
+    </LinearLayout>
+
+</ScrollView>

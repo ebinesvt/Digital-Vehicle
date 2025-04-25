@@ -1,0 +1,64 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HOME"
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/doc"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="30dp"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="View Documents" />
+          <TextView
+            android:id="@+id/vehi"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="30dp"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Vehicle Details" />
+            <TextView
+            android:id="@+id/punish"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="30dp"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="View Punishments" />
+              <TextView
+            android:id="@+id/com"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="30dp"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Messages" />
+               <TextView
+            android:id="@+id/log"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="30dp"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Logout" />
+
+    </LinearLayout>
+
+</ScrollView>

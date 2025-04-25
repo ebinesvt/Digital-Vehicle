@@ -1,0 +1,35 @@
+{% include 'adminheader.html'%}
+
+	<center><h1>VIEW PENALITY</h1></center>
+	<form method="post">
+
+
+
+		<table align="center" border="2">
+			<tr>
+				<th>Description:</th>
+				<td>{{data['pen'][0]['penalty_desc']}}</td>
+			</tr>
+			<tr>
+				<th>Penalty Amount:</th>
+				<td>{{data['pen'][0]['penalty_amount']}}</td>
+			</tr>
+		</table>
+		<!-- <table align="center" border="2">
+			<tr>
+				<td>Punishment Type</td>
+				<td>Punishment Type Description</td>
+				<td>Penalty Description</td>
+				<td>Penalty Amount</td>
+			</tr>
+			<tbody>
+				{% for row in data['pen']%}
+				<td>{{row['punish_type_name']}}</td>
+				<td>{{row['punish_type_desc']}}</td>
+				<td>{{row['penalty_desc']}}</td>
+				<td>{{row['penalty_amount']}}</td>
+			</tbody>
+			{% endfor %}
+		</table> -->
+	</form>
+	{% include 'footer.html'%}

@@ -1,0 +1,254 @@
+
+<!-- footer -->
+<section class="agile-footer w3ls-section py-5">
+	<div class="container">
+		<div class="list-footer">
+			<ul class="footer-nav text-center">
+				<li>
+					<a href="/">Home</a>
+				</li>
+				<!-- <li>
+					<a href="/">About</a>
+				</li>
+				<li>
+					<a href="/">Services</a>
+				</li>
+				<li>
+					<a href="/">Properties</a>
+				</li>
+				<li>
+					<a href="/">Contact</a>
+				</li> -->
+			</ul>
+		</div>
+		<div class="agileits_w3layouts-footer-bottom">
+			<div class="row w3_agile-footer-grids py-5 my-4">
+				<div class="col-lg-3 col-sm-12 w3_agile-footer1 f1">
+					<h2 class="mb-3">
+						<a href="index.html">DigitalVehicle</a>
+					</h2>
+					<!-- <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem atus error sit volupt unde.</p> -->
+				</div>
+				<div class="col-lg-7 col-sm-12 row w3_agile-footer1 f2">
+					<div class="col-lg-4  col-sm-4 inner-li">
+						<h5 class="mb-3">Partners</h5>
+						<ul class="w3ls-footer-bottom-list">
+							<li>
+								<a class="page-scroll" href="/">Our Group</a>
+							</li>
+							<li>
+								<a class="page-scroll" href="/">Cochin Mechanics</a>
+							</li>
+							<li>
+								<a class="page-scroll" href="/">Edappalli Mc drivers</a>
+							</li>
+							<li>
+								<a class="page-scroll" href="/">Aluva Brothers</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-lg-4 col-sm-4 inner-li">
+						<h5 class="mb-3">About us</h5>
+						<ul class="w3ls-footer-bottom-list">
+							<li>
+								<a href="/">We Provide Online Services for Digital Vehicle Implementation</a>
+							</li>
+							<!-- <li>
+								<a href="#">Terms of use</a>
+							</li>
+							<li>
+								<a href="#">Privacy policy</a>
+							</li>
+							<li>
+								<a href="#">Blog</a>
+							</li> -->
+						</ul>
+					</div>
+					<!-- <div class="col-lg-4 col-sm-4 inner-li">
+						<h5 class="mb-3">support</h5>
+						<ul class="w3ls-footer-bottom-list">
+							<li>
+								<a href="#">24/7 service</a>
+							</li>
+							<li>
+								<a href="#">FAQ</a>
+							</li>
+							<li>
+								<a href="#">media</a>
+							</li>
+						</ul>
+					</div> -->
+				</div>
+				<div class="col-lg-2 col-sm-4  w3_agile-footer1 f3">
+					<h5 class="mb-3">Need Help?</h5>
+					<ul class="footer-social-icons">
+						<li>
+							<a href="/">
+								Contact us on 1234567890
+							</a>
+						</li>
+						<!-- <li>
+							<a href="#">
+								Careers
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Success
+							</a>
+						</li> -->
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="agileits_w3layouts-copyright text-center">
+			<p>© 2020 DigitalVehicle. All Rights Reserved | Design by
+				<a href="http://w3layouts.com/" target="=_blank"> W3layouts </a>
+			</p>
+		</div>
+	</div>
+</section>
+<!-- //footer -->
+
+<!-- Vertically centered Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-uppercase text-center" id="exampleModalLongTitle"> DigitalVehicle</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <!-- <div class="modal-body">
+		<img src="images/ban11.jpg" class="img-fluid mb-3" alt="Modal Image" />
+        Vivamus eget est in odio tempor interdum. Mauris maximus fermentum arcu, ac finibus ante. Sed mattis risus at ipsum elementum, ut auctor turpis cursus. Sed sed odio pharetra, aliquet velit cursus, vehicula enim. Mauris porta aliquet magna, eget laoreet ligula.
+      </div> -->
+      <div class="modal-footer">
+       <!--  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+         <button type="button" class="btn btn-primary">Save changes</button>-->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- //Vertically centered Modal -->
+
+<!-- js-scripts -->		
+
+	<!-- js -->
+	<script type="text/javascript" src="/static/js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="/static/js/bootstrap.js"></script> <!-- Necessary-JavaScript-File-For-Bootstrap --> 
+	<!-- //js -->	
+	
+	<!-- Banner Responsive slider -->
+	<script src="/static/js/responsiveslides.min.js"></script>
+	<script>
+		// You can also use "$(window).load(function() {"
+		$(function () {
+			// Slideshow 4
+			$("#slider4").responsiveSlides({
+				auto: true,
+				pager: false,
+				nav: true,
+				speed: 500,
+				namespace: "callbacks",
+				before: function () {
+					$('.events').append("<li>before event fired.</li>");
+				},
+				after: function () {
+					$('.events').append("<li>after event fired.</li>");
+				}
+			});
+
+		});
+	</script>
+	<!-- // Banner Responsive slider -->
+	<!-- script for responsive tabs -->						
+<script src="/static/js/easy-responsive-tabs.js"></script>
+<script>
+$(document).ready(function () {
+$('#horizontalTab').easyResponsiveTabs({
+type: 'default', //Types: default, vertical, accordion           
+width: 'auto', //auto or any width like 600px
+fit: true,   // 100% fit in a container
+closed: 'accordion', // Start closed if in accordion view
+activate: function(event) { // Callback function if tab is switched
+var $tab = $(this);
+var $info = $('#tabInfo');
+var $name = $('span', $info);
+$name.text($tab.text());
+$info.show();
+}
+});
+$('#verticalTab').easyResponsiveTabs({
+type: 'vertical',
+width: 'auto',
+fit: true
+});
+});
+</script>
+<!--script for responsive tabs -->
+<!-- Calendar -->
+				<script src="/static/js/jquery-ui.js"></script>
+				  <script>
+						  $(function() {
+							$( "#datepicker,#datepicker1,#datepicker2,#datepicker3" ).datepicker();
+						  });
+				  </script>
+			<!-- //Calendar -->
+<!-- stats -->
+	<script src="/static/js/jquery.waypoints.min.js"></script>
+	<script src="/static/js/jquery.countup.js"></script>
+	<script>
+		$('.counter').countUp();
+	</script>
+	<!-- //stats -->
+	<!-- flexSlider --><!-- for testimonials -->
+	<script defer src="/static/js/jquery.flexslider.js"></script>
+	<script type="text/javascript">
+		$(window).load(function(){
+		  $('.flexslider').flexslider({
+			animation: "slide",
+			start: function(slider){
+			  $('body').removeClass('loading');
+			}
+		  });
+		});
+	</script>
+	<!-- //flexSlider --><!-- for testimonials -->
+
+	<!-- start-smoth-scrolling -->
+	<script src="/static/js/SmoothScroll.min.js"></script>
+	<script type="text/javascript" src="/static/js/move-top.js"></script>
+	<script type="text/javascript" src="/static/js/easing.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){		
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+			});
+		});
+	</script>
+	<!-- here stars scroslling icon -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+								
+			$().UItoTop({ easingType: 'easeOutQuart' });
+								
+			});
+	</script>
+	<!-- //here ends scrolling icon -->
+	<!-- start-smoth-scrolling -->
+	
+<!-- //js-scripts -->
+
+</body>
+</html>

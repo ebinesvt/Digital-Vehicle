@@ -1,0 +1,162 @@
+what is pickle file in python?
+===================
+1.Binary files
+2.Is to convert object into binary files.
+3.Is not secure.
+4.Reverse process of pickling is called unpicklng.
+5.Arbitrary data is any data in any format. In the context of the Windows Media Player SDK, this means data in a format that is not supported by Windows Media Player. In the context of the Player, arbitrary data is simply binary data that the Player is not designed to play back natively.
+==================================
+differences between the pickle protocols and JSON (JavaScript Object Notation):
+========================================================
+1.JSON format serialization  while inthe case of pickle they are in binary format
+2.JSON i s human readable form while  picke is not ,not perfectly understtod.
+3.JSON is interoperable and widely used outside of the Python ecosystem, while pickle is Python-specific;
+
+4.JSON, by default, can only represent a subset of the Python built-in types, and no custom classes; pickle can represent an extremely large number of Python types (many of them automatically, by clever usage of Python’s introspection facilities; complex cases can be tackled by implementing specific object APIs);
+
+5.Unlike pickle, deserializing untrusted JSON does not in itself create an arbitrary code execution vulnerability.
+==========================================================
+pickle while uses a dumps() for (serialization)defining model interface. Its for calling seriaze an object hierarchy.And also  loads() will call the deserialize object hierarchy(deserialization).
+The pickle module provides the following constants:
+
+pickle.HIGHEST_PROTOCOL
+=======================
+An integer, the highest protocol version available. This value can be passed as a protocol value to functions dump() and dumps() as well as the Pickler constructor.
+
+pickle.DEFAULT_PROTOCOL
+
+=======================================================
+pickle.dumps(obj, protocol=None, *, fix_imports=True, buffer_callback=None)
+====Passing arguments are above mentioned.
+===================================
+pickle.load(file, *, fix_imports=True, encoding="ASCII", errors="strict",buffers=None)====Unpickler(file.load()).
+=======================================
+pickle file can be identified in terms of their  key and thir values.
+for example :Key :Bency Value:Baby
+coressponding binary values are created on tothe pickle file(also that we call it as dataset.millions of dataset created).
+
+We are able to import pickle library
+===import pickle
+data set are stored in terms of binary format.
+
+=====================================
+Field values ==we must be enter the field values pass field name of corresponding table.
+An integer, the default protocol version used for pickling. May be less than HIGHEST_PROTOCOL. 
+====================================================
+
+READ NEXT
+
+MODEL-BASED MACHINE LEARNING CAN HELP OVERCOME CHALLENGES IN MODEL BUILDING TECHNIQUES
+
+
+
+
+There is no objection in saying that Classification is one of the most popular Machine learning problems across the entirety of Data Science and Machine Learning. We humans have been so fixated on making machines learn to classify and categorize things, whether it be images, symbols or whatever form that data can take.
+
+
+Artificial Neural Networks or shortly ANN’s are widely used today in many applications and, classification is one of them and also there are many libraries and frameworks that are dedicated to building Neural Networks with ease. Most of these frameworks and tools, however, require many lines of code to implement when compared to a simple library from Scikit-Learn that we are going to learn now.
+
+In this article, we will discuss one of the easiest to implement Neural Network for classification from Scikit-Learn’s called the MLPClassifier.
+
+W3Schools
+Before we begin, make sure to check out MachineHack’s latest hackathon- Predicting The Costs Of Used Cars – Hackathon By Imarticus Learning. Click here to participate and win exciting prizes.
+
+MLPClassifier vs Other Classification Algorithms
+===================================
+MLPClassifier stands for Multi-layer Perceptron classifier which in the name itself connects to a Neural Network. Unlike other classification algorithms such as Support Vectors or Naive Bayes Classifier, MLPClassifier relies on an underlying Neural Network to perform the task of classification.
+
+One similarity though, with Scikit-Learn’s other classification algorithms is that implementing MLPClassifier takes no more effort than implementing Support Vectors or Naive Bayes or any other classifiers from Scikit-Learn.
+
+Implementing MLPClassifier With Python
+Once again we will rely on our favourite hackathon platform MachineHack for the dataset we are going to use in this coding walkthrough.
+
+To get the dataset, head to MachineHack, sign up and select the Predict The Data Scientists Salary In India Hackathon. Go ahead and start the hackathon, you can download the datasets in the assignments page of the hackathon.
+======================================================
+
+READ NEXT
+
+MODEL-BASED MACHINE LEARNING CAN HELP OVERCOME CHALLENGES IN MODEL BUILDING TECHNIQUES
+
+
+
+
+There is no objection in saying that Classification is one of the most popular Machine learning problems across the entirety of Data Science and Machine Learning. We humans have been so fixated on making machines learn to classify and categorize things, whether it be images, symbols or whatever form that data can take.
+
+
+Artificial Neural Networks or shortly ANN’s are widely used today in many applications and, classification is one of them and also there are many libraries and frameworks that are dedicated to building Neural Networks with ease. Most of these frameworks and tools, however, require many lines of code to implement when compared to a simple library from Scikit-Learn that we are going to learn now.
+
+In this article, we will discuss one of the easiest to implement Neural Network for classification from Scikit-Learn’s called the MLPClassifier.
+
+W3Schools
+Before we begin, make sure to check out MachineHack’s latest hackathon- Predicting The Costs Of Used Cars – Hackathon By Imarticus Learning. Click here to participate and win exciting prizes.
+
+MLPClassifier vs Other Classification Algorithms
+MLPClassifier stands for Multi-layer Perceptron classifier which in the name itself connects to a Neural Network. Unlike other classification algorithms such as Support Vectors or Naive Bayes Classifier, MLPClassifier relies on an underlying Neural Network to perform the task of classification.
+
+One similarity though, with Scikit-Learn’s other classification algorithms is that implementing MLPClassifier takes no more effort than implementing Support Vectors or Naive Bayes or any other classifiers from Scikit-Learn.
+
+Implementing MLPClassifier With Python
+=============================
+Once again we will rely on our favourite hackathon platform MachineHack for the dataset we are going to use in this coding walkthrough.
+
+To get the dataset, head to MachineHack, sign up and select the Predict The Data Scientists Salary In India Hackathon. Go ahead and start the hackathon, you can download the datasets in the assignments page of the hackathon.
+
+Importing the Dataset
+import pandas as pd
+data = pd.read_csv("Final_Train_Dataset.csv")
+data = data[['company_name_encoded','experience', 'location', 'salary']]
+
+The above code block will read the dataset into a data-frame. Also, we will stick will only a few selected features from the dataset 'company_name_encoded', 'experience', 'location' and 'salary'.
+
+Panda
+=====
+pandas is a Python package providing fast, flexible, and expressive data structures designed to make working with “relational” or “labeled” data both easy and intuitive. It aims to be the fundamental high-level building block for doing practical, real world data analysis in Python.
+
+0==column 
+1==row
+Random state is the random number generator.
+instance used by np.random
+=============================
+Measuring the accuaracy
+================
+By using confusion matrix.
+===================
+def accuracy(confusion_matrix):
+   diagonal_sum = confusion_matrix.trace()
+   sum_of_all_elements = confusion_matrix.sum()
+   return diagonal_sum / sum_of_all_elements
+
+Building the MLPClassifier
+===================
+Based on certain layers and their state.
+
+Decision Tree Classifier
+================
+We can also export the tree in Graphviz format using the export_graphviz exporter. If you use the conda package manager, the graphviz binaries
+
+and the python package can be installed with
+conda install python-graphviz
+Alternatively binaries for graphviz can be downloaded from the graphviz project homepage, and the Python wrapper installed from pypi with 
+pip install graphviz.
+
+KNeiougbures Classifier
+=====================
+## Import the Classifier.
+from sklearn.neighbors import KNeighborsClassifier
+## Instantiate the model with 5 neighbors. 
+knn = KNeighborsClassifier(n_neighbors=5)
+## Fit the model on the training data.
+knn.fit(X_train, y_train)
+## See how the model performs on the test data.
+knn.score(X_test, y_test)
+===========================
+The below code is used to load data into pandas as a data frames.
+=============================================
+## load the iris data into a DataFrame
+import pandas as pd
+url = 'http://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data' 
+## Specifying column names.
+col_names = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'species']
+iris = pd.read_csv(url, header=None, names=col_names)
+========================================================== 
+The course recommendation for carreer interest...

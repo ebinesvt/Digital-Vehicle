@@ -1,0 +1,61 @@
+{% include 'adminheader.html'%}
+
+	<center><h1>UPLOAD DOCUMENT</h1></center>
+	<form method="post" enctype="multipart/form-data">
+		<center>
+		<table class="table" style="width: 600px">
+			<tr>
+			<th>Username</th>
+			<td><select name="username" required class="form-control">
+				<option value="">Select</option>
+				{% for row in data['docs']%}
+				<option value="{{row['user_id']}}">{{row['username']}}</option>
+				{% endfor %}
+			</select></td>
+		</tr>
+		<tr>
+			<th>Document Type</th>
+			<td><select name="doc_type_id" required class="form-control">
+				<option value="">Select</option>
+				{% for row in data['doc']%}
+				<option value="{{row['doc_type_id']}}">{{row['doc_type_name']}}</option>
+				{% endfor %}
+			</select></td>
+		</tr>
+		<tr>
+			<th>Document File</th>
+			<td><input type="file" name="image" required="" class="form-control"></td>
+		</tr>
+		<tr>
+			<th>Enter Number</th>
+			<td><input type="text" name="no" required="" class="form-control"></td>
+		</tr>
+		<tr>
+			<td colspan="2" align="center">
+				<input type="submit" name="submit" value="submit" class="btn btn-primary">
+			</td>
+		</tr>
+		</table></center>
+		<br>
+		<h1 align="center">DOCUMENT</h1>
+		<center>
+		<table class="table" style="width: 500px">
+			<tr>
+				<th>Username</th>
+				<th>Document Type</th>
+				<th>Document File</th>
+			</tr>
+			<tbody>
+				{% for row in data['docc']%}
+				<tr>
+					<td>{{row['NAME']}}</td>
+					<td>{{row['doc_type_name']}}</td>
+					<td><a href="{{row['docs_file']}}" class="btn btn-success" download>Docs</a></td>
+				</tr>
+					{% endfor %}
+			</tbody>
+			
+
+		</table></center>
+	</form>
+	{% include 'footer.html' %}

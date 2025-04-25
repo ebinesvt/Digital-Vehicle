@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Digital Vehicle</string>
+    <string name="action_settings"></string>
+    <string name="hello_world"></string>
+    <string name="title_activity_login"></string>
+    <string name="title_activity_home"></string>
+    <string name="title_activity_complaint"></string>
+    <string name="title_activity_vehicle__details">Vehicle_Details</string>
+    <string name="title_activity_view__punishments">View_Punishments</string>
+    <string name="title_activity_payment">Payment</string>
+    <string name="title_activity_view_documents">View_documents</string>
+
+</resources>

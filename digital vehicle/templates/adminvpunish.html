@@ -1,0 +1,26 @@
+{% include 'adminheader.html'%}
+
+	<center><h1>VIEW PUNISHMENT</h1></center>
+	<form method="post"><center>
+		<table class="table" style="width: 1000px">
+			<tr>
+				<td>Punishment Type</td>
+				<td>Username</td>
+				<td>Station name</td>
+				<td>Date</td>
+				<td>Status</td>
+				<td>Penalty</td>
+			</tr>
+			<tbody>
+				{% for row in data['vpunish']%}
+				<td>{{row['punish_type_name']}}</td>
+				<td>{{row['NAME']}}</td>
+				<td>{{row['station_name']}}</td>
+				<td>{{row['punishment_date']}}</td>
+				<td>{{row['punishment_status']}}</td>
+				<td><a href="/admin/adminvpenalty?id={{row['punish_type_id']}}" class="btn btn-danger">Penalty</a></td>
+			</tbody>
+			{% endfor %}
+		</table></center>
+	</form>
+	{% include 'footer.html'%}

@@ -1,0 +1,15 @@
+source code--compile-->object code--linking or binding-->executable file(.exe)
+(compiler of c tcc.exe)
+second scenario - in oops
+linking at runtime 
+keeps its indivduality in .exe
+
+needs dynamic binding for suppourting polymorphism
+
+SECURITY IN OBJECT ORIENTED LANGUGE
+
+heap - less secured area(static,global)(main)
+stack - highly secure(member var,member fun)
+os can only enter into heap
+object is used to give access for heap to stack(public)
+through function object can access from public to private in stack

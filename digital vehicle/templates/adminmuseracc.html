@@ -1,0 +1,104 @@
+{% include 'adminheader.html'%}
+
+	<center><h1>MANAGE USER ACCOUNT</h1></center>
+	<form method="post" enctype="multipart/form-data">
+		<center>
+		<table align="center" class="table" style="width: 600px">
+			<tr>
+				<th>First Name</th>
+				<td><input type="text" name="first_name" class="form-control"></td>
+			</tr>
+			<tr>
+				<th>Last Name</th>
+				<td><input type="text" name="last_name" class="form-control"></td>
+			</tr>
+			<tr>
+				<th>Latitude</th>
+				<td><input type="text" name="latitude" class="form-control"></td>
+			</tr>
+			<tr>
+				<th>Longitude</th>
+				<td><input type="text" name="longitude" class="form-control"></td>
+			</tr>
+			<tr>
+				<th>Place</th>
+				<td><input type="text" name="place" class="form-control"></td>
+			</tr>
+			<tr>
+				<th>Pincode</th>
+				<td><input type="number" name="pincode" class="form-control"></td>
+			</tr>
+			<tr>
+				<th>House Name</th>
+				<td><input type="text" name="house_name" class="form-control"></td>
+			</tr>
+			<tr>
+				<th>Gender</th>
+				<td>
+					<input type="radio" name="gender" value="Trans">Trans
+					<input type="radio" name="gender" value="Female">Female
+				<input type="radio" name="gender" value="Male">Male</td>
+			</tr>
+			<tr>
+				<th>Date of Birth</th>
+				<td><input type="Date" name="dob" class="form-control"></td>
+			</tr>
+			<tr>
+				<th>Photo</th>
+				<td><input type="file" name="photo" class="form-control"></td>
+			</tr>
+			<tr>
+				<th>Phone</th>
+				<td><input type="number" name="phone" class="form-control"></td>
+			<tr>
+				<th>Email</th>
+				<td><input type="text" name="email" class="form-control"></td>
+			</tr>
+			<tr>
+				<th>UserName</th>
+				<td><input type="text" name="username" class="form-control"></td>
+			</tr>
+			<tr>
+				<th>Password</th>
+				<td><input type="password" name="password" class="form-control"></td>
+			</tr><br>
+			<tr>
+				<td colspan="2" align="center"><input type="submit" name="submit" value="submit" class="btn btn-primary"></td>
+			</tr>
+			
+		</table>
+</center>
+		<br>
+		<h1 align="center">USER</h1>
+		<center>
+		<table align="center" class="table" style="width: 800px">
+			<tr>
+				<td> Name</td>
+				<td>Place</td>
+				<td>Pincode</td>
+				<td>House Name</td>
+				<td>Gender</td>
+				<td>Date of Birth</td>
+				<td>Photo</td>
+				<td>Phone</td>
+				<td>Email</td>
+			</tr>
+			<tbody>
+				{% for row in data['adminmuseracc']%}
+				<tr>
+					<td>{{row['first_name']}} {{row['last_name']}}</td>
+					<td>{{row['place']}}</td>
+					<td>{{row['pincode']}}</td>
+					<td>{{row['house_name']}}</td>
+					<td>{{row['gender']}}</td>
+					<td>{{row['dob']}}</td>
+					<td><img src="/{{row['photo']}}" width="300px" height="300px"></td>
+					<td>{{row['phone']}}</td>
+					<td>{{row['email']}}</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+</center>
+	</form>
+	{% include 'footer.html'%}

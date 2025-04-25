@@ -1,0 +1,62 @@
+{% include 'adminheader.html'%}
+
+	<center><h1>MANAGE VEHICLE INFORMATION</h1></center>
+	<form method="post">
+		<center>
+		<table class="table" style="width: 800px">
+			<tr>
+				<th>Choose User:</th>
+				<td><select name="username" class="form-control" required>
+					<option value="">Select</option>
+					{% for row in data['vehicles']%}
+					<option value="{{row['user_id']}}">{{row['name']}}</option>
+					{% endfor %}
+				</select></td>
+			</tr>
+			<tr>
+				<th>Register Number:</th>
+				<td><input type="text" name="reg_no" class="form-control" required=""></td>
+			</tr>
+			<tr>
+				<th>Manufacture Year:</th>
+				<td><input type="number" name="man_year" class="form-control" required=""></td>
+			</tr>
+			<tr>
+				<th>Brand</th>
+				<td><input type="text" name="brand" class="form-control" required="" ></td>
+			</tr>
+			<tr>
+				<th>Model</th>
+				<td><input type="text" name="model" class="form-control"  required=""></td>
+			</tr>
+			<tr>
+			<td colspan="2" align="center">
+				<input type="submit" name="submit" value="submit" class="btn btn-primary">
+			</td>
+			</tr>
+		</table></center>
+		<br>
+		<h1 align="center">VEHICLE</h1>
+		<center>
+		<table class="table" style="width: 1000px">
+			<tr>
+				<th>Username</th>
+				<th>Register Number</th>
+				<th>Manafacture Year</th>
+				<th>Brand</th>
+				<th>Model</th>
+			</tr>
+			<tbody>
+				{% for row in data['ve']%}
+				<tr>
+					<th>{{row['name']}}</th>
+					<th>{{row['register_no']}}</th>
+					<th>{{row['manfacture_year']}}</th>
+					<th>{{row['brand']}}</th>
+					<th>{{row['model']}}</th>
+				</tr>
+			</tbody>
+			{% endfor %}
+		</table></center>
+	</form>
+	{% include 'footer.html'%}

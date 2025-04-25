@@ -1,0 +1,30 @@
+{% include 'policeheader.html' %}
+
+<center><h1><b>VIEW PUNISHMENT</b></h1></center>
+<center>
+	<table class="table" style="width: 800px">
+		<tr>
+			<th>Name</th>
+			<th>Place</th>
+			<th>Phone</th>
+			<th>Punishment</th>
+			<th>Penalty</th>
+			<th>Date</th>
+			<th>Status</th>
+			<th>Track User</th>
+		</tr>
+		{% for row in data['punish_det'] %}
+		<tr>
+			<td>{{row['name']}}</td>
+			<td>{{row['place']}}</td>
+			<td>{{row['phone']}}</td>
+			<td>{{row['punish_type_name']}}</td>
+			<td>{{row['penalty_amount']}}</td>
+			<td>{{row['punishment_date']}}</td>
+			<td>{{row['punishment_status']}}</td>
+			<td><a href="https://maps.google.com?q={{row['latitude']}},{{row['longitude']}}" target="_blank" class="btn btn-success "><n style="size: 50px">⊳</n></a></td>
+		</tr>
+		{% endfor %}
+	</table>
+</center>
+{% include 'footer.html' %}

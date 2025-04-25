@@ -1,0 +1,95 @@
+{% include 'adminheader.html'%}
+	<center><h1>MANAGE POLICE ACCOUNT</h1></center>
+	<form method="post">
+		{% if data['police'] %}
+		<form method="post">
+			<center>
+		<table align="center" class="table" style="width: 800px">
+			<tr>
+				<th>Station Name</th>
+				<td><input type="text"class="form-control" name="station_names" value="{{data['police'][0]['station_name']}}" required=""></td>
+			</tr>
+			<tr>
+				<th>Phone</th>
+				<td><input type="number"class="form-control" name="phones" value="{{data['police'][0]['phone']}}"required=""></td>
+			<tr>
+				<th>Email</th>
+				<td><input type="text"class="form-control" name="emails" value="{{data['police'][0]['email']}}"required=""></td>
+			</tr>
+			<tr>
+				<th>Place</th>
+				<td><input type="text"class="form-control" name="places" value="{{data['police'][0]['place']}}"required=""></td>
+			</tr>
+			<tr>
+				<th>Pincode</th>
+				<td><input type="number"class="form-control" name="pincodes" value="{{data['police'][0]['pincode']}}"required=""></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center"><input type="submit" name="update" class="btn btn-primary" value="Update"></td>
+			</tr>
+			
+		</table>
+	</center>
+		{% else %}
+		<center>
+		<table align="center" class="table" style="width: 800px">
+			<tr>
+				<th>Station Name</th>
+				<td><input type="text" name="station_name" required="" class="form-control"></td>
+			</tr>
+			<tr>
+				<th>Phone</th>
+				<td><input type="number" name="phone" required=""class="form-control"></td>
+			<tr>
+				<th>Email</th>
+				<td><input type="text" name="email" required=""class="form-control"></td>
+			</tr>
+			<tr>
+				<th>Place</th>
+				<td><input type="text" name="place" required=""class="form-control"></td>
+			</tr>
+			<tr>
+				<th>Pincode</th>
+				<td><input type="number" name="pincode" required=""class="form-control"></td>
+			</tr>
+			<tr>
+				<th>Username</th>
+				<td><input type="text" name="username" required=""class="form-control"></td>
+			</tr>
+			<tr>
+				<th>Password</th>
+				<td><input type="password" name="password" required=""class="form-control"></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center"><input type="submit" name="submit" value="submit" class="btn btn-primary"></td>
+			</tr>
+			
+		</table> </center>
+		<br>
+		<h1 align="center"> ACCOUNTS</h1>
+		<table align="center" class="table" style="width: 1000px">
+			<tr>
+				<th>Station Name</th>
+				<th>Phone</th>
+				<th>Email</th>
+				<th>Place</th>
+				<th>Pincode</th>
+				<th rowspan="2">Actions</th>
+			</tr>
+			<tbody>
+				{% for row in data['adminpregistration']%}
+				<tr>
+					<td>{{row['station_name']}}</td>
+					<td>{{row['phone']}}</td>
+					<td>{{row['email']}}</td>
+					<td>{{row['place']}}</td>
+					<td>{{row['pincode']}}</td>
+					<td><a href="?action=update&id={{row['police_id']}}" class="btn btn-success">UPDATE</a>
+						<a href="?action=delete&id={{row['police_id']}}" class="btn btn-danger">DELETE</a></td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+		{% endif %}
+	</form>
+	{% include 'footer.html'%}
